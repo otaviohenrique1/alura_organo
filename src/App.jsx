@@ -1,13 +1,13 @@
-import Banner from './components/Banner'
-import CampoTexto from './components/CampoTexto'
+import Banner from './components/Banner';
+import Formulario from './components/Formulario';
 
 function App() {
   return (
     <>
       <Banner />
-      <CampoTexto />
+      <Formulario />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
