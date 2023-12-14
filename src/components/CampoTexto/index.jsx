@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import "./CampoTexto.css";
 
 const CampoTexto = (props) => {
@@ -10,5 +11,10 @@ const CampoTexto = (props) => {
     </div>
   );
 };
+
+CampoTexto.propTypes = {
+  label: PropTypes.string,
+  placeholder: PropTypes.string,
+}
 
 export default CampoTexto;
