@@ -5,7 +5,11 @@ const ListaSuspensa = (props) => {
   return (
     <div className="lista-suspensa">
       <label htmlFor="">{props.label}</label>
-      <select>
+      <select
+        value={props.valor}
+        onChange={evento => props.aoAlterado(evento.target.value)}
+        required={props.obrigatorio}
+      >
         {props.itens.map((item) => {
           return (
             <option key={item} value={item}>{item}</option>
@@ -18,7 +22,10 @@ const ListaSuspensa = (props) => {
 
 ListaSuspensa.propTypes = {
   label: PropTypes.string,
-  itens: PropTypes.array
+  itens: PropTypes.array,
+  obrigatorio: PropTypes.bool,
+  valor: PropTypes.any,
+  aoAlterado: PropTypes.any
 }
 
 export default ListaSuspensa;
